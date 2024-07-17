@@ -4,7 +4,7 @@ Hi! My name is **Ayush Kumar**, I have created this MERN Stack project with the 
 
 # Prerequisite
 
-1.  Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** .
+Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** .
 
 # Install Dependencies
 
