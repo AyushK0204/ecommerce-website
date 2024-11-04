@@ -1,6 +1,6 @@
-# MERN E-COMMERCE TUTORIAL
+# MERN E-COMMERCE
 
-Hi! My name is **Ayush Kumar**, I have created this MERN Stack project with the help of tutorial created by Abhishek Singh on Youtube.
+Hi! My name is **Ayush Kumar**, I have created this MERN Stack project "Eleganza".
 
 # Prerequisite
 
@@ -29,8 +29,8 @@ SMPT_MAIL=
 SMPT_PASSWORD=
 SMPT_HOST=
 SMPT_PORT=
-CLOUDINARY_NAME
-CLOUDINARY_API_KEY
-CLOUDINARY_API_SECRET
-_fill each filed with your info respectively_
+CLOUDINARY_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+_fill each with your info respectively_
 
