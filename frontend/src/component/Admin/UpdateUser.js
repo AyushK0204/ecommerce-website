@@ -75,7 +75,7 @@ const UpdateUser = () => {
 
   return (
     <Fragment>
-      <MetaData title="Update User" />
+      <MetaData title="Update User - Admin Panel -- ELEGANZA" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">

@@ -5,6 +5,7 @@ import MetaData from "../layout/MetaData";
 import Loader from "../layout/Loader/Loader";
 import { Link } from "react-router-dom";
 import "./Profile.css";
+import Title from "../layout/Title/Title";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -21,10 +22,13 @@ const Profile = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${user.name}'s Profile`} />
+          <MetaData title={`${user.name}'s Profile -- ELEGANZA`} />
           <div className="profileContainer">
             <div>
-              <h1>My Profile</h1>
+              {/* <h1>My Profile</h1> */}
+              <div className="profileHeading">
+                <Title text1={"My"} text2={"Profile"} />
+              </div>
               <img src={user.avatar.url} alt={user.name} />
               <Link to="/me/update">Edit Profile</Link>
             </div>

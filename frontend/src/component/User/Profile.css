@@ -9,6 +9,11 @@
   background-color: white;
 }
 
+.profileHeading {
+  font-family: "Roboto";
+  padding-bottom: 1rem;
+}
+
 .profileContainer > div {
   display: flex;
   height: 100vh;

@@ -1,64 +1,21 @@
-.banner {
-  background-image: url("../../images/tamanna-rumee-eD1RNYzzUxc-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vmin;
+.logoDiv {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  height: 10rem;
+  background: linear-gradient(300deg, #ffffff, #f6d663, #ffffff);
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
   justify-content: center;
-  color: white;
+  align-items: center;
+  margin: 1rem 7rem;
 }
-
-.banner > h1 {
-  margin: 5vmax;
-
-  font: 600 2.5vmax "Roboto";
+.logo {
+  width: 10rem;
+  border-radius: 10px;
 }
-
-.banner > p {
-  font: 300 1.4vmax "Lucida Sans";
-}
-
-.banner > a > button {
-  margin-bottom: 5vmax;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 0;
-  padding: 1vmax;
-  transition: all 0.5s;
-  width: 9vmax;
-  font: 500 1vmax "Roboto";
-}
-.banner > a > button:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: white;
-}
-
-.banner::after {
-  content: "";
-  width: 100vw;
-  height: 100vmin;
-  background-color: #ffffff;
-  position: absolute;
-  top: 0%;
-  left: 0;
-  clip-path: polygon(100% 68%, 0 100%, 100% 100%);
-  max-width: 100%;
-}
-
 .homeHeading {
+  padding-top: 2.5rem;
   text-align: center;
-  font-family: Roboto;
-  font-size: 1.4vmax;
-  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
-  width: 20vmax;
-  padding: 1vmax;
-  margin: 5vmax auto;
-  color: rgb(0, 0, 0, 0.7);
 }
 
 .container {
@@ -116,7 +73,11 @@
 
   transform: translateY(-1vmax);
 }
-
+@media screen and (max-width: 640px) {
+  .logo {
+    width: 7rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .productCard > p {
     font-size: 1.7vmax;

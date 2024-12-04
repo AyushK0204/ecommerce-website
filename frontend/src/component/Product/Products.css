@@ -1,11 +1,20 @@
 .productsHeading {
-  margin: 2vmax auto;
+  /* margin: 2vmax auto;
   width: 15vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   padding: 2vmax;
   color: rgba(0, 0, 0, 0.678);
   font: 500 1.5vmax "Roboto";
+  text-align: center; */
+  padding-top: 4rem;
   text-align: center;
+}
+.filterTags {
+  font-family: "Roboto";
+}
+
+.ratingTag {
+  margin-top: 1rem;
 }
 
 .products {

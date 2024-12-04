@@ -122,7 +122,7 @@ const OrderList = () => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL ORDERS - Admin`} />
+      <MetaData title={`ALL ORDERS - Admin Panel -- ELEGANZA`} />
 
       <div className="dashboard">
         <SideBar />

@@ -57,7 +57,7 @@ const UpdatePassword = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Change Password" />
+          <MetaData title="Change Password -- ELEGANZA" />
           <div className="updatePasswordContainer">
             <div className="updatePasswordBox">
               <h2 className="updatePasswordHeading">Update Profile</h2>

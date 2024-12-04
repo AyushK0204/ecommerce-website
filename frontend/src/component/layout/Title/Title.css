@@ -1,0 +1,32 @@
+.mainArea {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.textOne {
+  color: #6b7280;
+  font-size: 1.5rem;
+}
+
+.textTwo {
+  font-weight: 500;
+  color: #374151;
+}
+
+.headingLine {
+  width: 2rem;
+  background-color: #374151;
+  height: 1px;
+}
+
+@media (min-width: 600px) {
+  .headingLine {
+    width: 3rem;
+    height: 2px;
+  }
+  .textOne {
+    font-size: 2.5rem;
+  }
+}

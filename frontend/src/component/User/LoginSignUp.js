@@ -10,6 +10,7 @@ import FaceIcon from "@material-ui/icons/Face";
 import ProfileImage from "../../images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
+import MetaData from "../layout/MetaData";
 import { useAlert } from "react-alert";
 
 const LoginSignUp = () => {
@@ -53,7 +54,9 @@ const LoginSignUp = () => {
     myForm.set("name", name);
     myForm.set("email", email);
     myForm.set("password", password);
-    myForm.set("avatar", avatar);
+    if (avatar !== ProfileImage) {
+      myForm.set("avatar", avatar);
+    }
     dispatch(register(myForm));
   };
 
@@ -113,6 +116,7 @@ const LoginSignUp = () => {
         <Loader />
       ) : (
         <Fragment>
+          <MetaData title="Login/Sign Up -- ELEGANZA" />
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>

@@ -8,22 +8,34 @@ const cloudinary = require("cloudinary");
 
 // Register a user
 
-exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-    folder: "avatars",
-    width: 150,
-    crop: "scale",
-  });
+exports.registerUser = catchAsyncErrors(async (req, res) => {
+  let avatarData = null;
+
+  if (req.body.avatar) {
+    const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+      folder: "avatars",
+      width: 150,
+      crop: "scale",
+    });
+
+    avatarData = {
+      public_id: myCloud.public_id,
+      url: myCloud.secure_url,
+    };
+  } else {
+    avatarData = {
+      public_id: "default-avatar-public-id",
+      url: "https://res.cloudinary.com/dkrqdozxm/image/upload/v1733301075/avatars/user-profile-icon-vector-avatar-600nw-2247726673_uzcloy.jpg",
+    };
+  }
+
   const { name, email, password } = req.body;
 
   const user = await User.create({
     name,
     email,
     password,
-    avatar: {
-      public_id: myCloud.public_id,
-      url: myCloud.secure_url,
-    },
+    avatar: avatarData,
   });
 
   sendToken(user, 201, res);
@@ -92,7 +104,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Ecommerce Password Recovery`,
+      subject: `Eleganza Password Recovery`,
       message,
     });
 

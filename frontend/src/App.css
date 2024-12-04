@@ -5,6 +5,14 @@
 
 body {
   cursor: url("./images/cursor.png"), auto;
+  /* background-color: #fbedde; */
+  background-image: linear-gradient(
+      rgba(255, 230, 0, 0.2),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 230, 0, 0.2)
+    ),
+    url("../src/images/bgAbstract.jpg");
+  background-size: cover;
 }
 
 /* Chrome, Safari, Edge, Opera */

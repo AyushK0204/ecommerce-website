@@ -121,7 +121,7 @@ const UsersList = () => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL USERS - Admin`} />
+      <MetaData title={`ALL USERS - Admin Panel -- ELEGANZA`} />
 
       <div className="dashboard">
         <SideBar />

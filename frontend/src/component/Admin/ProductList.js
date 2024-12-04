@@ -113,7 +113,7 @@ const ProductList = () => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL PRODUCTS - Admin`} />
+      <MetaData title={`ALL PRODUCTS - Admin Panel -- ELEGANZA`} />
       <div className="dashboard">
         <SideBar />
         <div className="productListContainer">

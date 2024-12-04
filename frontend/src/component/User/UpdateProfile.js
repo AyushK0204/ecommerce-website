@@ -77,7 +77,7 @@ const UpdateProfile = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Update Profile" />
+          <MetaData title="Update Profile -- ELEGANZA" />
           <div className="updateProfileContainer">
             <div className="updateProfileBox">
               <h2 className="updateProfileHeading">Update Profile</h2>

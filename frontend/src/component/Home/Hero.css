@@ -1,0 +1,92 @@
+.mainHero {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #9ca3af;
+  margin: 1rem 7rem;
+}
+
+.heroLeft {
+  display: flex;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.heroLeftColor {
+  color: #414141;
+}
+
+.heroLeftInside {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.heroLeftInsideLine {
+  width: 2rem;
+  height: 2px;
+  background: #414141;
+}
+
+.heroLeftInsideText {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.heroLeftInsideText2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  line-height: 1.625;
+}
+
+.heroLeftInsideText3 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.heroImg {
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .mainHero {
+    flex-direction: row;
+  }
+  .heroImg {
+    width: 50%;
+  }
+  .heroLeft {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 50%;
+  }
+  .heroLeftInsideText2 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .heroLeftInsideLine {
+    width: 2.75rem;
+  }
+  .heroLeftInsideText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .heroLeftInsideText3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .heroLeftInsideText2 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

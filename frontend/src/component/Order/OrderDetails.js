@@ -29,7 +29,7 @@ const OrderDetails = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Order Details" />
+          <MetaData title="Order Details -- ELEGANZA" />
           <div className="orderDetailsPage">
             <div className="orderDetailsContainer">
               <Typography component="h1">

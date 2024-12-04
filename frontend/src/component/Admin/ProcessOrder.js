@@ -55,7 +55,7 @@ const ProcessOrder = () => {
 
   return (
     <Fragment>
-      <MetaData title="Process Order" />
+      <MetaData title="Process Order - Admin Panel -- ELEGANZA" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">

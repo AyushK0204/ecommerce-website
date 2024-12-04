@@ -129,7 +129,7 @@ const UpdateProduct = () => {
 
   return (
     <Fragment>
-      <MetaData title="Create Product" />
+      <MetaData title="Create Product - Admin Panel -- ELEGANZA" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">

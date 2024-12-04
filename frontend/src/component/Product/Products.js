@@ -7,9 +7,9 @@ import ProductCard from "../Home/ProductCard";
 import { useParams } from "react-router-dom";
 import Pagination from "react-js-pagination";
 import Slider from "@material-ui/core/Slider";
-import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
+import Title from "../layout/Title/Title";
 
 const categories = [
   "Laptop",
@@ -29,7 +29,6 @@ const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 500000]);
   const [category, setCategory] = useState("");
-
   const [ratings, setRatings] = useState(0);
 
   const {
@@ -51,6 +50,10 @@ const Products = () => {
     setPrice(newPrice);
   };
 
+  const ratingsHandler = (event, newRating) => {
+    setRatings(newRating);
+  };
+
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -68,8 +71,10 @@ const Products = () => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="PRODUCTS -- ECOMMERCE" />
-          <h2 className="productsHeading">Products</h2>
+          <MetaData title="PRODUCTS -- ELEGANZA" />
+          <div className="productsHeading">
+            <Title text1={"Our"} text2={"Products"} />
+          </div>
 
           <div className="products">
             {products &&
@@ -79,7 +84,7 @@ const Products = () => {
           </div>
 
           <div className="filterBox">
-            <Typography>Price</Typography>
+            <p className="filterTags">Price</p>
             <Slider
               value={price}
               onChange={priceHandler}
@@ -89,7 +94,7 @@ const Products = () => {
               max={500000}
             />
 
-            <Typography>Categories</Typography>
+            <p className="filterTags">Categories</p>
             <ul className="categoryBox">
               {categories.map((category) => (
                 <li
@@ -102,17 +107,16 @@ const Products = () => {
               ))}
             </ul>
 
-            <fieldset>
-              <Typography component="legend">Ratings Above</Typography>
+            <fieldset className="ratingTag">
+              <p className="filterTags">Ratings Above</p>
               <Slider
                 value={ratings}
-                onChange={(e, newRating) => {
-                  setRatings(newRating);
-                }}
+                onChange={ratingsHandler}
                 aria-labelledby="continuous-slider"
                 valueLabelDisplay="auto"
                 min={0}
                 max={5}
+                marks
               />
             </fieldset>
           </div>
