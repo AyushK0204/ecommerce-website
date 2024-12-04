@@ -3,7 +3,7 @@ import CheckoutSteps from "../Cart/CheckoutSteps";
 import { useSelector, useDispatch } from "react-redux";
 import MetaData from "../layout/MetaData";
 import { useNavigate } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Typography } from "@material-ui/core";
 import { useAlert } from "react-alert";
 import {
   CardNumberElement,
@@ -15,9 +15,9 @@ import {
 
 import axios from "axios";
 import "./payment.css";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import EventIcon from "@mui/icons-material/Event";
-import VpnKeyIcon from "@mui/icons-material/VpnKey";
+import CreditCardIcon from "@material-ui/icons/CreditCard";
+import EventIcon from "@material-ui/icons/Event";
+import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import { createOrder, clearErrors } from "../../actions/orderAction.js";
 
 const axiosInstance = axios.create({

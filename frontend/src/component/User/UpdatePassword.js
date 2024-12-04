@@ -7,7 +7,9 @@ import { clearErrors, updatePassword } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { UPDATE_PASSWORD_RESET } from "../../constants/userConstants";
 import MetaData from "../layout/MetaData";
-import { LockOpen, Lock, VpnKey } from "@mui/icons-material";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
+import LockIcon from "@material-ui/icons/Lock";
+import VpnKeyIcon from "@material-ui/icons/VpnKey";
 
 const UpdatePassword = () => {
   const dispatch = useDispatch();
@@ -65,7 +67,7 @@ const UpdatePassword = () => {
                 onSubmit={updatePasswordSubmit}
               >
                 <div className="loginPassword">
-                  <VpnKey />
+                  <VpnKeyIcon />
                   <input
                     type="password"
                     placeholder="Old Password"
@@ -76,7 +78,7 @@ const UpdatePassword = () => {
                 </div>
 
                 <div className="loginPassword">
-                  <LockOpen />
+                  <LockOpenIcon />
                   <input
                     type="password"
                     placeholder="New Password"
@@ -86,7 +88,7 @@ const UpdatePassword = () => {
                   />
                 </div>
                 <div className="loginPassword">
-                  <Lock />
+                  <LockIcon />
                   <input
                     type="password"
                     placeholder="Confirm Password"

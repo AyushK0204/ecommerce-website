@@ -7,7 +7,8 @@ import { clearErrors, resetPassword } from "../../actions/userAction";
 import { useParams } from "react-router-dom";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
-import { LockOpen, Lock } from "@mui/icons-material";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
+import LockIcon from "@material-ui/icons/Lock";
 
 const ResetPassword = () => {
   const dispatch = useDispatch();
@@ -62,7 +63,7 @@ const ResetPassword = () => {
                 onSubmit={resetPasswordSubmit}
               >
                 <div>
-                  <LockOpen />
+                  <LockOpenIcon />
                   <input
                     type="password"
                     placeholder="New Password"
@@ -72,7 +73,7 @@ const ResetPassword = () => {
                   />
                 </div>
                 <div className="loginPassword">
-                  <Lock />
+                  <LockIcon />
                   <input
                     type="password"
                     placeholder="Confirm Password"

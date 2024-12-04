@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Carousel from "react-responsive-carousel";
+import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,8 +19,8 @@ import {
   DialogContent,
   DialogTitle,
   Button,
-} from "@mui/material";
-import { Rating } from "@mui/material";
+} from "@material-ui/core";
+import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
 
 const ProductDetails = () => {

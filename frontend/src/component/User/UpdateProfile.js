@@ -2,7 +2,8 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./UpdateProfile.css";
 import Loader from "../layout/Loader/Loader";
 import { useNavigate } from "react-router-dom";
-import { MailOutline, Face } from "@mui/icons-material";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import FaceIcon from "@material-ui/icons/Face";
 import ProfileImage from "../../images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, updateProfile, loadUser } from "../../actions/userAction";
@@ -87,7 +88,7 @@ const UpdateProfile = () => {
                 onSubmit={updateProfileSubmit}
               >
                 <div className="updateProfileName">
-                  <Face />
+                  <FaceIcon />
                   <input
                     type="text"
                     placeholder="Name"
@@ -98,7 +99,7 @@ const UpdateProfile = () => {
                   />
                 </div>
                 <div className="updateProfileEmail">
-                  <MailOutline />
+                  <MailOutlineIcon />
                   <input
                     type="email"
                     placeholder="Email"
