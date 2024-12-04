@@ -2,11 +2,13 @@ import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./LoginSignUp.css";
 import Loader from "../layout/Loader/Loader";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
-import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import FaceIcon from "@material-ui/icons/Face";
+import {
+  MailOutline,
+  LockOpen,
+  VisibilityOff,
+  Visibility,
+  Face,
+} from "@mui/icons-material";
 import ProfileImage from "../../images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
@@ -128,7 +130,7 @@ const LoginSignUp = () => {
               </div>
               <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
                 <div className="loginEmail">
-                  <MailOutlineIcon />
+                  <MailOutline />
                   <input
                     type="email"
                     placeholder="Email"
@@ -138,7 +140,7 @@ const LoginSignUp = () => {
                   />
                 </div>
                 <div className="loginPassword">
-                  <LockOpenIcon />
+                  <LockOpen />
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
@@ -155,7 +157,7 @@ const LoginSignUp = () => {
                     }`}
                     onClick={togglePasswordVisibility}
                   >
-                    {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
                   </span>
                 </div>
                 <Link to="/password/forgot">Forget Password ?</Link>
@@ -168,7 +170,7 @@ const LoginSignUp = () => {
                 onSubmit={registerSubmit}
               >
                 <div className="signUpName">
-                  <FaceIcon />
+                  <Face />
                   <input
                     type="text"
                     placeholder="Name"

@@ -1,6 +1,5 @@
 import React from "react";
 import "./aboutSection.css";
-import { Typography } from "@material-ui/core";
 import about_img from "../../../images/about_img.png";
 import Title from "../Title/Title";
 import MetaData from "../MetaData";
