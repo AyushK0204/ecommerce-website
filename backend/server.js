@@ -26,15 +26,8 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// const server = app.listen(process.env.PORT, () => {
-//   console.log(`Server is working on http://localhost:${process.env.PORT}`);
-// });
-
-const server = app.listen(process.env.PORT || 5000, () => {
-  const host = process.env.NODE_ENV === "PRODUCTION" ? "0.0.0.0" : "localhost";
-  console.log(
-    `Server is running on http://${host}:${process.env.PORT || 5000}`
-  );
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server is working on http://localhost:${process.env.PORT}`);
 });
 
 //Unhandled Promise Rejection
