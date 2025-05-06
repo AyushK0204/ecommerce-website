@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "source-map-loader": "^4.0.1",
+    "source-map-loader": "^2.0.1",
     "webpack": "^4.42.0"
   }
 }
