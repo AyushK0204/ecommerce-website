@@ -6,6 +6,7 @@ const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const errorMiddleware = require("./middleware/error");
 const path = require("path");
+const helmet = require("helmet");
 
 //Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
@@ -16,6 +17,19 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
+
+// Use Helmet for Content Security Policy (CSP) headers
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"], // Allow Google Fonts
+      styleSrc: ["'self'", "https://fonts.googleapis.com", "'unsafe-inline'"], // Allow Google Fonts styles
+      scriptSrc: ["'self'"],
+      imgSrc: ["'self'"],
+    },
+  })
+);
 
 //Route imports
 
