@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const errorMiddleware = require("./middleware/error");
 const path = require("path");
 const helmet = require("helmet");
+const cors = require("cors");
 
 //Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
@@ -17,6 +18,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
+
+app.use(
+  cors({
+    origin: "http://localhost:3000", // your frontend origin
+    credentials: true, // if using cookies or auth headers
+  })
+);
 
 // Use Helmet for Content Security Policy (CSP) headers
 app.use(

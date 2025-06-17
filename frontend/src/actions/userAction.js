@@ -41,7 +41,7 @@ import axios from "axios";
 // const axiosInstance = axios.create({
 //   baseURL: "http://localhost:3000", // Set your base URL here
 // });
-const apiUrl = process.env.REACT_BACKEND_URL;
+const apiUrl = process.env.REACT_APP_BACKEND_URL;
 
 // Login
 export const login = (email, password) => async (dispatch) => {

@@ -22,7 +22,7 @@ import {
 
 import axios from "axios";
 
-const apiUrl = process.env.REACT_BACKEND_URL;
+const apiUrl = process.env.REACT_APP_BACKEND_URL;
 
 // Create Order
 export const createOrder = (order) => async (dispatch) => {

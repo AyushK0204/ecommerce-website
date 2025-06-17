@@ -31,8 +31,7 @@ import {
   CLEAR_ERRORS,
 } from "../constants/productConstants";
 
-const apiUrl = process.env.REACT_BACKEND_URL;
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL;
 // Get All Products
 export const getProduct =
   (keyword = "", currentPage = 1, price = [0, 500000], category, ratings = 0) =>
